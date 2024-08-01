@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css Only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Checkout example - Bootstrap v5.3</title>
+    <style>
+        .sizeI {font-size: 4em;}
+        .vizualisar {background-color: rgb(255, 180, 180);}
+        .width {width: 100%;}
+        .arroba {background-color: #2B3035; border: 1px solid #495057; padding: 10px; border-radius: 5px 0px 0px 5px;}
+        body {background-color: #2B3035; color: #DEE2E6;}
+        header>p{width: 80%;margin: auto;}
+        input[type='text'], input[type='number'], select, option{background-color: #212529;border: 1px solid #495057; border-radius: 5px; height: 40px; padding: 0 10px; color: white;}
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        button{background-color: #1b6eeb; color:white; padding: 10px; border: none; border-radius: 10px;}
+        table{background-color: #212529; border: 1px solid #495057;}
+        tr{border: 1px solid #495057;}
+        td{padding: 8px 12px;}
+        td>small{color: #bdc2c7;}
+    </style>
+</head>
+<body>
+    
+    <header class="container text-center pt-5">
+        <i class="fa-brands fa-bootstrap sizeI mb-3"></i>
+        <h3>Formulário de Chek-in</h3>
+        <p class="mb-5 fs-5">Abaixo está um formulário de exemplo criado inteiramente com os controles de formulário do Bootstrap. Cada grupo de formulários obrigatório tem um estado de validação que pode ser acionado ao tentar enviar o formulário sem concluí-lo.</p>
+    </header>
+
+    <section class="container">
+        <div class="row g-1">
+            <div class="col-8">
+                <form action="" method="" class="container">
+                    <h4>Endereço da Cobrança</h4>
+
+                    <div class="row">
+                       <div class="col mb-3">
+                           <label for="iNome">Primeiro nome</label>
+                           <br>
+                           <input type="text" id="iNome" class="width">
+                       </div>
+                       <div class="col mb-3">
+                           <label for="iSobrenome">Sobrenome</label>
+                           <br>
+                           <input type="text" id="iSobrenome" class="width">
+                       </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="iUsuario">Nome de usuário</label>
+                            <br>
+                            <div class="width mb-3">
+                                <i class="fa-solid fa-at text-center arroba" style="width: 5%;"></i><input type="text" id="iUsuario" style="width: 95%; border-radius: 0px 5px 5px 0px;height: 37px;" class="borderr" placeholder="Nome de usuário">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="iEmail">Email (<small>Opcional</small>)</label><br>
+                            <input type="text" id="iEmail" class="width mb-3" placeholder="você@exemplo.com">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="iEndereco">Endereço</label><br>
+                            <input type="text"id="iEndereco" class="width mb-3" placeholder="Rua principal 1234">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="iEndereco2">Endereço 2 (<small>Opcional</small>)</label><br>
+                            <input type="text"id="iEndereco2" class="width mb-3" placeholder="Apartamento ou suíte">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="sPaís">País</label>
+                            <br>
+                            <select id="sPaís" class="width">
+                                <option value="#">Escolher...</option>
+                                <option value="#">Brasil</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="sEstado">Estado</label>
+                            <br>
+                            <select id="sEstado" class="width">
+                                <option value="#">Escolher...</option>
+                                <option value="#">Pernambuco</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="cep">CEP</label>
+                            <br>
+                            <input type="number"id="cep" class="mb-3 width">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row pt-3 pb-3">
+                        <div class="col-12"><input type="checkbox" name="" id=""> O endereço de entrega é o mesmo que meu endereço de cobrança</div>
+                        <div class="col-12"><input type="checkbox" name="" id=""> Guarde esta informação para a próxima vez</div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <h4 class="mb-3">Pagamento</h4>
+                        <label><input type="radio" name="pagamento" id="credito"> Cartão de crédito</label>
+                        <label><input type="radio" name="pagamento" id="debito"> Cartão de débito</label>
+                        <label><input type="radio" name="pagamento" id="paypal"> PayPal</label>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label for="nCartao">Nome do cartão</label><br>
+                            <input type="text" id="nCartao" class="width"><br>
+                            <small>Nome completo conforme exibido no cartão</small>
+                        </div>
+                        <div class="col">
+                            <label for="numCartao">Número do cartão</label><br>
+                            <input type="text" id="numCartao" class="width"><br>
+                            <small>Nome completo conforme exibido no cartão</small>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-3">
+                            <label for="expiracao">Expiração</label><br>
+                            <input type="text" id="expiracao">
+                        </div>
+                        <div class="col-3">
+                            <label for="cvv">CVV</label><br>
+                            <input type="text" id="cvv">
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <button class="width mb-5 fs-5">Continuar para finalizar a compra</button>
+
+                </form>
+            </div>
+
+            <div class="col-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10" style="color: #0D6EFD;"><h4>Seu carrinho</h4></div>
+                        <div class="col-2">
+                            <span style= "background-color: #0D6EFD; color: white; border-radius: 50%; padding: 5px 10px;">3</span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-5">
+                        <table>
+                            <tr>
+                                <td>Nome do Produto<br><small>Descrição Breve</small></td>
+                                <td>$12</td>
+                            </tr>
+                            <tr>
+                                <td>Segundo Produto<br><small>Descrição Breve</small></td>
+                                <td>$8</td>
+                            </tr>
+                            <tr>
+                                <td>Terceiro Produto<br><small>Descrição Breve</small></td>
+                                <td>$5</td>
+                            </tr>
+                            <tr>
+                                <td>Código promocional<br><small>CÓDIGODEEXEMPLO</small></td>
+                                <td>-$5</td>
+                            </tr>
+                            <tr>
+                                <td>Total (USD)</td>
+                                <td>$20</td>
+                            </tr>
+                        </table>
+                    </div>
+<!-- 
+                    <div class="row" style="background-color: #212529; padding: 5px; border-radius: 5px; text-align: center;">
+                        <label><input type="text"id="codigopromo" placeholder="Código promocional" style="width: 70%; height: 45px; border-radius: 5px 0px 0px 5px;"><button style="border-radius: 0px 5px 5px 0px;">Resgatar</button></label>
+                    </div> -->
+
+                    <div class="row p-2" style="background-color: #212529;"> 
+                        <div class="col-10"><input type="text"id="" placeholder="Código promocional" class="width"></div>
+                        <div class="col-2"><button style="border-radius: 0px 5px 5px 0px;margin-left: -24px; height: 40px;">Resgatar</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="container text-center mt-5 mb-5">
+        <p>&copy;2017-2024 Paulo Constructor</p>
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Apoiar</a>
+    </footer>
+
+    <!-- Js Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

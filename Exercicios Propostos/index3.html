@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Exemple</title>
+    <!-- Css Only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cópia Layout</title>
+
+    <style>
+
+        *{margin: 0; padding: 0; font-family:var(--bs-body-font-family)}
+
+        body {background-color: #212529;}
+
+        header {background: linear-gradient(to bottom, #33393E, #212529); color: white; padding: 10px;}
+        .container{width: 1000px;}
+        .header{border-bottom: 2px solid #33393E; padding-bottom: 10px; width: 1000px;}
+        .alinhar{display: flex;flex-flow: row nowrap; align-items: center; gap: 5px; font-size: 2.5em;}
+        .alinhar>h4{margin-top: 5px; font-weight: normal;}
+        nav{display: flex; gap: 5px; justify-content: space-between;}
+        nav>a{text-decoration: none; color: #FFFFFF;}
+
+        .pricing{width: 40%;; text-align: center; color: white; padding: 35px;}
+        .pricing>.row>h1{font-size: 3.5em; font-weight: normal;}
+        .pricing>.row>p{color: #AEB2B6; font-size: 1.3em; text-align: center;}
+
+        .card{border: 2px solid #33393E; background-color: #212529; color: white; text-align: center; padding: 0; border-radius: 10px;}
+        .card>h4{background-color: #272B2F; height: 50px; align-items: center; display: flex; justify-content: center; border-radius: 10px 10px 0px 0px; border-bottom: 2px solid #33393E;}
+        .content{padding: 10px;}
+        .content>h3>span{color: #AEB2B6; font-weight: lighter;}
+        .content>button{padding: 10px; width: 100%; border-radius: 10px;}
+        .first{background-color: #212529; color: #0D6EFD; border: 1px solid #0D6EFD;}
+        .first:hover{background-color: #0D6EFD; color: white; transition: .5s;}
+        .second{background-color: #0D6EFD; color: white; border: none;}
+        .second:hover{background-color: #0b56c7; color: white; transition: .5s;}
+        .enterprise{border-color: #0D6EFD;}
+        .enterprise>h4{background-color: #0D6EFD;}
+
+        .table{padding: 50px 0px 60px 0; border-bottom: 1px solid #33393E;}
+        .table>h3{color: white; font-weight: lighter; font-size: 2.4em; text-align: center;}
+        table{width: 100%; height: 300px;}
+        tr,td{background-color: #212529; color: white; text-align: center; padding: 10px 0px; border-color: #33393E;}
+        .left{text-align: left; font-weight: bold;}
+
+        footer{padding-top: 50px;}
+        footer>.row>.col>i{font-size: 2em; color: white;}
+        footer>.row>.col>h4{color: white;}
+        footer>.row>.col>p{color: #7d8991;}
+        footer>.row>.col>p:hover{color: #656f75; cursor: pointer;}
+
+        ::-webkit-scrollbar {width: 12px;}
+        ::-webkit-scrollbar-track {background: #757575;border-radius: 10px;}
+        ::-webkit-scrollbar-thumb {background: #b6b6b6;border-radius: 10px;}
+        ::-webkit-scrollbar-thumb:hover {background: #dbdbdb;}
+     </style>
+
+</head>
+<body>
+    
+    <header>
+        <div class="container header">
+        <div class="row align-items-center">
+            <div class="col-8">
+                <i class="fa-brands fa-bootstrap alinhar"><h4>Pricing example</h4></i>
+            </div>
+            <nav class="col-4">
+                <a href="#">Features</a>
+                <a href="#">Enterprise</a>
+                <a href="#">Support</a>
+                <a href="#">Pricing</a>
+            </nav>
+        </div>
+        </div>
+    </header>
+
+    <section class="container pricing">
+        <div class="row"><h1>Pricing</h1></div>
+        <div class="row"><p>Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p></div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <h4>Free</h4>
+                    <div class="content">
+                        <h3>$0<span>/mo</span></h3>
+                        <p>10 users included</p>
+                        <p>2GB of storage</p>
+                        <p>Email Support</p>
+                        <p>Help center access</p>
+                        <button class="first">Sign up for free</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <h4>Pro</h4>
+                    <div class="content">
+                        <h3>$15<span>/mo</span></h3>
+                        <p>20 users included</p>
+                        <p>10GB of storage</p>
+                        <p>Priority email Support</p>
+                        <p>Help center access</p>
+                        <button class="second">Sign up for free</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card enterprise">
+                    <h4>Enterprise</h4>
+                    <div class="content">
+                        <h3>$29<span>/mo</span></h3>
+                        <p>30 users included</p>
+                        <p>15GB of storage</p>
+                        <p>Phone and email Support</p>
+                        <p>Help center access</p>
+                        <button class="second">Sign up for free</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container table">
+        <h3>Compare plans</h3>
+        <table>
+            <tr>
+                <td class="left"></td>
+                <td>Free</td>
+                <td>Pro</td>
+                <td>Enterprise</td>
+            </tr>
+            <tr>
+                <td class="left">Public</td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="left">Private</td>
+                <td></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="left">Permissions</td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="left">Sharing</td>
+                <td></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="left">Unlimited members</td>
+                <td></td>
+                <td><i class="fa-solid fa-check"></i></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr>
+                <td class="left">Extra security</td>
+                <td></td>
+                <td></td>
+                <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+        </table>
+    </section>
+
+    <footer class="container">
+        <div class="row">
+            <div class="col">
+                <i class="fa-brands fa-bootstrap"></i>
+                <p>&copy;2017-2024</p>
+            </div>
+            <div class="col">
+                <h4>Features</h4>
+                <p>Cool stuff</p>
+                <p>Random feature</p>
+                <p>Team feature</p>
+                <p>Stuff for developers</p>
+                <p>Another one</p>
+                <p>Last time</p>
+            </div>
+            <div class="col">
+                <h4>Resources</h4>
+                <p>Resource</p>
+                <p>Resource name</p>
+                <p>Another resource</p>
+                <p>Final resource</p>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <p>Team</p>
+                <p>Locations</p>
+                <p>Privacy</p>
+                <p>Terms</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Js Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
